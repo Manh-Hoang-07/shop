@@ -17,9 +17,15 @@ use Illuminate\Support\Facades\Route;
 //FrontEnd
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 
+//Đăng nhập admin
+Route::get('/login/index', 'App\Http\Controllers\Admin\Login\LoginController@index');
+
 Route::get('/trang-chu', 'App\Http\Controllers\HomeController@index');
 Route::get('/quan-tri', 'App\Http\Controllers\AdminController@index');
-Route::get('/dashboard', 'App\Http\Controllers\Admin\Dashboard\DashboardController@index');
+Route::get('/admin/dashboard', 'App\Http\Controllers\Admin\Dashboard\DashboardController@index');
 
 
 //BackEnd
+
+//Đăng nhập admin
+Route::post('/login/login', 'App\Http\Controllers\Admin\Login\LoginController@login');

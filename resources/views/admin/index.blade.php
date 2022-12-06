@@ -57,7 +57,7 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <img alt="" src="{{asset('admin/images/2.png')}}">
-                        <span class="username">John Doe</span>
+                        <span class="username">{{ \Illuminate\Support\Facades\Session::get('admin_name') ?? 'Không có tên' }}</span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
